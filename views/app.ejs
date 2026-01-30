@@ -1,0 +1,29 @@
+<form action="/createdata">
+
+  <input type="hidden" name="id" value="<%= Updatedata ? Updatedata.id : '' %>">
+
+  <input type="text" name="mainImage" placeholder="Image URL"
+    value="<%= Updatedata ? Updatedata.mainImage : '' %>">
+  <br><br>
+
+  <input type="text" name="productName" placeholder="Product Name"
+    value="<%= Updatedata ? Updatedata.productName : '' %>">
+  <br><br>
+
+  <input type="text" name="productCode" placeholder="Product Code"
+    value="<%= Updatedata ? Updatedata.productCode : '' %>">
+  <br><br>
+
+  <input type="text" name="productPrise" placeholder="Product Price"
+    value="<%= Updatedata ? Updatedata.productPrise : '' %>">
+  <br><br>
+
+  <input type="text" name="images" placeholder="Image URL"
+    value="<%= Updatedata ? Updatedata.images : '' %>">
+  <br><br>
+
+  <textarea name="benifits" placeholder="Benefits"><%= Updatedata ? Updatedata.benifits : '' %></textarea>
+
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
