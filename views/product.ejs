@@ -213,14 +213,16 @@
           <i class="fa-regular fa-share-from-square"></i>
           <i class="fa-regular fa-heart"></i>
         </div>
-        <img src="<%= Editdata.mainImage %>" >
+        <img src="<%= Detailsdata.mainImage %>" >
       </div>
 
       <div class="photo-album">
-        <ul>
-          <% Editdata.images.map(img => { %>
-            <li><img src="<%= img %>"></li>
-          <% }) %>
+        <ul>  <%Detailsdata.images.map((img) =>{
+            %>
+            <li><img src="<%=img %>"></li>
+            <%
+        })
+        %>
         </ul>
       </div>
     </div>
@@ -228,19 +230,23 @@
 
   <div class="product__info">
     <div class="title">
-      <h1><%= Editdata.productName %></h1>
-      <span>CODE: <%= Editdata.productCode %></span>
+      <h1><%= Detailsdata.productName %></h1>
+      <span>CODE: <%= Detailsdata.productCode %></span>
     </div>
 
     <div class="price">
-      Rs <span><%= Editdata.productPrise %></span>
+      Rs <span><%= Detailsdata.productPrise %></span>
     </div>
 
     <div class="description">
       <h3>
-    <% Editdata.benifits.map(benifits => { %>
-            <li><%= benifits %></li>
-          <% }) %></h3>
+          <%Detailsdata.benifits.map((benifits) =>{
+            %>
+ <li><%=benifits%></li>
+ <%
+          })
+   %>         
+        </h3>
     </div>
   </div>
 </section>
